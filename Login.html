@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>Login Form</title>
+		<style>
+			body {
+				font-family: Arial, sans-serif;
+				background-image: url("bg.jpg");
+				background-color: #f3f3f3;
+				margin: 0;
+				padding: 0;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				height: 100vh;
+			}
+			h2 {				
+				text-align: center;
+			}
+
+			.main {
+				background-color: #fff;
+				border-radius: 15px;
+				box-shadow: 0 0 20px
+					rgba(0, 0, 0, 0.2);
+				padding: 20px;
+				width: 300px;
+			}
+
+			.main h2 {
+				color: #390ACA;
+				margin-bottom: 20px;
+			}
+
+			label {
+				display: block;
+				margin-bottom: 5px;
+				color: #555;
+				font-weight: bold;
+			}
+
+			input[type="text"],			
+			input[type="password"],
+			select {
+				width: 100%;
+				margin-bottom: 15px;
+				padding: 10px;
+				box-sizing: border-box;
+				border: 1px solid #ddd;
+				border-radius: 5px;
+			}
+
+			button[type="submit"] {
+				padding: 15px;
+				border-radius: 10px;
+				border: none;
+				background-color: #390ACA;
+				color: white;
+				cursor: pointer;
+				width: 100%;
+				font-size: 16px;
+			}
+			a {
+				padding: 10px;
+				border-radius: 10px;
+				border: none;
+				background-color: #390ACA;
+				color: white;
+				cursor: pointer;
+				width: 100%;
+				font-size: 16px;
+			}
+
+		</style>
+		<script>  
+			function Loginvalidateform(){  
+			var uname=document.myform.uname.value;  
+			var password=document.myform.password.value;  
+			  
+			if (uname=="admin" && password=="admin"){  
+			  window.location.href = "Dashboard.html"; 
+			  return false;  
+			}else{  
+			  alert("Please enter valid user name and Password.");  
+			  return false;  
+			  }  
+			}  
+		</script>
+	</head>
+
+	<body>
+		<div class="main">
+			<h2>Employee Login</h2>
+			<form  name="myform" action="#" method="post" onsubmit="return Loginvalidateform()">
+				<label for="uname"
+					>User Name:</label
+				>
+				<input
+					type="text"
+					id="uname"
+					name="uname"
+					required
+				/>
+				
+				<label for="password"
+					>Password:</label
+				>
+				<input
+					type="password"
+					id="password"
+					name="password"					
+					required
+				/>				
+				<button type="submit">
+					Login
+				</button></br></br></br>	
+				New Employee?<span>   </span><a  href="signup.html">Registration</a>
+
+			</form>
+		</div>
+	</body>
+</html>

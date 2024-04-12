@@ -1,1 +1,1 @@
-# HR-Managment-System-01
+# HR-Management-System
